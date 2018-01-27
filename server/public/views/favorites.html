@@ -1,2 +1,8 @@
 <p>Favorites</p>
-<button ng-click="experiment()">Hello</button>
+<!-- Favorites -->
+<div class="card favorites" ng-repeat="favorite in vm.favorites.result">
+        <h2>Favorite</h2>
+        <strong><p>Url:</p></strong>
+        <p>{{favorite.url}}</p>
+        <button class="fa fa-times-circle"></button>
+    </div>

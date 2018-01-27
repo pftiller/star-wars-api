@@ -1,12 +1,14 @@
 myApp.service('MeanService', ['$http', function($http){
-    console.log('YO');
+    console.log('service is loaded');
     const self = this;
-     const config = {
+    
+    // For searches
+    const config = {
         params: {search: ""}
     }
-    // should be an object
+
     self.swapi = {
-        
+       
     };
 
     self.experiment = function(){
@@ -27,4 +29,58 @@ myApp.service('MeanService', ['$http', function($http){
        
      };
  
+    // For favorites
+
+     self.addFavorite = {};
+     self.favorites = {
+            list:[]
+        };
+ 
+     self.addFavorite = function(url) {
+         $http.post('/router', router)
+             .then(function(response) {
+                 console.log('post success. this is repsonse:', response);
+                 self.getFavorites();
+             })
+             .catch(function (response) {
+                 console.log('post error. this is response:', response);
+             });
+     }
+ 
+     self.getFavorites = function() {
+         $http.get('/router')
+             .then(function (response) {
+                console.log('get success. this is repsonse:', response);
+                 self.favorites.result = response.data;
+             })
+             .catch(function (response) {
+                 console.log('get error. this is response:', response);
+             });
+     }
+ 
+    //  self.deleteFavorite = function(gameId) {
+    //      $http.delete(`/games/${gameId}`)
+    //          .then(function (response) {
+    //              console.log('delete success. this is response:', response);
+    //              self.getGames();
+    //          })
+    //          .catch(function (response) {
+    //              console.log('delete error. this is response:', response);
+    //          });
+    //  };
+ 
+    //  self.updateFavorite = function(game) {
+    //      console.log('updated game: ', game);
+         
+    //      $http.put(`/games/${game._id}`, game)
+    //          .then(function (response) {
+    //              console.log('put success. this is response:', response);
+    //              self.getGames();
+    //          })
+    //          .catch(function (response) {
+    //              console.log('put error. this is response:', response);
+    //          });
+    //  };
+ 
+self.getFavorites();
 }]);

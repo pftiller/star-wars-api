@@ -4,7 +4,7 @@
 <button class="btn-default" ng-click="vm.callSWAPI(selectedType, query)">Search</button>
 
 <!-- Films -->
-<div class="card" id="films" ng-if="selectedType == 'Films'" ng-repeat="film in vm.swapi.result">
+<div class="card" id="films" ng-if="selectedType == 'Films'" ng-repeat="film in vm.swapi.result" data="{{film.url}}">
     <h2>Films</h2>
     <strong><p>Film title:</p></strong>
     <p>{{film.title}}</p>
@@ -12,11 +12,12 @@
     <p>{{film.episode_id}}</p>
     <strong><p>Director:</p></strong>
     <p>{{film.director}}</p>
-    <button class="fa fa-star"></button>
+    <p>{{film.url}}</p>
+    <button class="fa fa-star" ng-click="vm.addFavorite(film.url)"></button>
 </div>
 
 <!-- People -->
-<div class="card" id="people" ng-if="selectedType == 'People'" ng-repeat="person in vm.swapi.result">
+<div class="card" id="people" ng-if="selectedType == 'People'" ng-repeat="person in vm.swapi.result" data="{{person.url}}">
         <h2>People</h2>
         <strong><p>Name:</p></strong>
         <p>{{person.name}}</p>
@@ -28,7 +29,7 @@
         <p>{{person.eye_color}}</p>
     </div>
 <!-- Planets -->
-<div class="card" id="planets" ng-if="selectedType == 'Planets'" ng-repeat="planet in vm.swapi.result">
+<div class="card" id="planets" ng-if="selectedType == 'Planets'" ng-repeat="planet in vm.swapi.result" data="{{planet.url}}">
         <h2>Planets</h2>
         <strong><p>Planet name:</p></strong>
         <p>{{planet.name}}</p>
@@ -38,7 +39,7 @@
         <p>{{planet.terrain}}</p>
     </div>
 <!-- Species -->
-<div class="card" id="species" ng-if="selectedType == 'Species'" ng-repeat="species in vm.swapi.result">
+<div class="card" id="species" ng-if="selectedType == 'Species'" ng-repeat="species in vm.swapi.result" data="{{species.url}}">
         <h2>Species</h2>
         <strong><p>Name of species:</p></strong>
         <p>{{species.name}}</p>
@@ -48,7 +49,7 @@
         <p>{{species.language}}</p>
     </div>
 <!-- Starships -->
-<div class="card" id="starships" ng-if="selectedType == 'Starships'" ng-repeat="starship in vm.swapi.result">
+<div class="card" id="starships" ng-if="selectedType == 'Starships'" ng-repeat="starship in vm.swapi.result" data="{{starship.url}}">
         <h2>Starships</h2>
         <strong><p>Name:</p></strong>
         <p>{{starship.name}}</p>
@@ -60,7 +61,7 @@
         <p>{{starship.class}}</p>
     </div>
 <!-- Vehicles -->
-<div class="card" id="vehicles" ng-if="selectedType == 'Vehicles'" ng-repeat="vehicle in vm.swapi.result">
+<div class="card" id="vehicles" ng-if="selectedType == 'Vehicles'" ng-repeat="vehicle in vm.swapi.result" data="{{vehicle.url}}">
         <h2>Vehicles</h2>
         <strong><p>Name:</p></strong>
         <p>{{vehicle.name}}</p>

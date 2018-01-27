@@ -16,4 +16,9 @@ myApp.controller('SearchController', ['MeanService', function (MeanService){
          'Starships',
          'Vehicles'
         ]
+
+
+        self.addFavorite = function(url) {
+            MeanService.addFavorite(url);
+        }
     }]);
