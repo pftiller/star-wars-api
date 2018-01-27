@@ -1,10 +1,14 @@
-<select>
-        <option>Planets</option> 
-        <option>Spaceships</option>
-        <option>Vehicles</option>
+<select ng-model="type">
+        <option>Films</option> 
         <option>People</option>
-        <option>Films</option>
+        <option>Planets</option>
         <option>Species</option>
+        <option>Starships</option>
+        <option>Vehicles</option>
 </select>
-<input type="text">
-<button class="btn-default" ng-click="vm.callSWAPI()">Search</button>
+<input type="text" ng-model="query">
+<button class="btn-default" ng-click="vm.callSWAPI(type, query)">Search</button>
+
+<div class="film" ng-repeat="item in vm.swapi.result" ng-if="showFilms">
+    <h2>{{item.name}</h2>
+</div>
