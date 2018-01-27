@@ -1,1 +1,10 @@
-<p>Search</p>
+<select ng-model="parameter">
+        <option>Planets</option> 
+        <option>Spaceships</option>
+        <option>Vehicles</option>
+        <option>People</option>
+        <option>Films</option>
+        <option>Species</option>
+</select>
+<input type="text" ng-model="keyword">
+<button ng-click="vm.callSWAPI()">Search</button>

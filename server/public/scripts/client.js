@@ -12,6 +12,6 @@ swApp.config(function ($routeProvider) {
                      controller: 'FavoritesController as vm',
                  })
                  .otherwise(
-                     {redirectTo: '/random'}
+                     {redirectTo: '/search'}
                  );
          });
