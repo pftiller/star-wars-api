@@ -7,15 +7,13 @@ myApp.controller('SearchController', ['MeanService', function (MeanService){
         console.log(type);
         MeanService.callSWAPI(type, query);
     }  
-}]);
 
-self.showProperCardSet = function(){
-    console.log('function triggered');
-    self.showFilms = !self.showFilms;
-    self.showPeople = !self.showPeople;
-    self.showPlanets = !self.showPlanets;
-    self.showSpecies = !self.showSpecies;
-    self.showStarships = !self.showStarships;
-    self.showVehicles = !self.showVehciles;
-  }
-});
+        self.types = [
+         'Films',
+         'People',
+         'Planets',
+         'Species',
+         'Starships',
+         'Vehicles'
+        ]
+    }]);

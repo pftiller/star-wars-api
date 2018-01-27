@@ -1,14 +1,31 @@
-<select ng-model="type">
-        <option>Films</option> 
-        <option>People</option>
-        <option>Planets</option>
-        <option>Species</option>
-        <option>Starships</option>
-        <option>Vehicles</option>
-</select>
+<select ng-model="selectedType" ng-options="x for x in vm.types">
+ </select>
 <input type="text" ng-model="query">
-<button class="btn-default" ng-click="vm.callSWAPI(type, query)">Search</button>
+<button class="btn-default" ng-click="vm.callSWAPI(selectedType, query)">Search</button>
 
-<div class="film" ng-repeat="item in vm.swapi.result" ng-if="showFilms">
+<!-- Films -->
+<div ng-if="selectedType == 'Films'" ng-repeat="item in vm.swapi.result">
     <h2>{{item.name}</h2>
 </div>
+
+<!-- People -->
+<div ng-if="selectedType == 'People'" ng-repeat="item in vm.swapi.result">
+    <h2>{{item.name}</h2>
+</div>
+<!-- Planets -->
+<div ng-if="selectedType == 'Planets'" ng-repeat="item in vm.swapi.result">
+    <h2>{{item.name}</h2>
+</div>
+<!-- Species -->
+<div ng-if="selectedType == 'Species'" ng-repeat="item in vm.swapi.result">
+    <h2>{{item.name}</h2>
+</div>
+<!-- Starships -->
+<div ng-if="selectedType == 'Starships'" ng-repeat="item in vm.swapi.result">
+    <h2>{{item.name}</h2>
+</div>
+<!-- Vehicles -->
+<div ng-if="selectedType == 'Vehicles'" ng-repeat="item in vm.swapi.result">
+    <h2>{{item.name}</h2>
+</div>
+
