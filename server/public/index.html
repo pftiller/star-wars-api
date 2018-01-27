@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="swApp">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,9 +24,14 @@
      <link href="styles/styles.css" rel="stylesheet" text="text/css">
 </head>
 <body>
-    <nav ng-include="/views/templates/nav.html">
+    <nav ng-include="'/views/templates/nav.html'">
     
     </nav>
+    <main>
     <h1>Hello world</h1>
+    <section ng-view>
+
+    </section>
+</main>
 </body>
 </html>

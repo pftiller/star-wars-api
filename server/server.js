@@ -3,12 +3,11 @@ const app = express();
 const bodyParser = require('body-parser');
 const router = require('./routes/star-wars.router');
 const port = process.env.PORT || 5000;
-const mongoose = require('./modules/mongoose');
-
-app.use(express.static('server/public/'));
-app.use(bodyParser.json()); 
+var mongoose = require('./modules/mongoose');
 
 
-app.listen(app.get('port'), function() {
-    console.log('Listening on port: ', app.get('port'));
+app.use(express.static('server/public'));
+
+app.listen(port, function() {
+    console.log('Listening on port: ', port);
 });
