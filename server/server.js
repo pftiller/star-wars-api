@@ -9,5 +9,5 @@ var mongoose = require('./modules/mongoose');
 app.use(express.static('server/public'));
 
 app.listen(port, function() {
-    console.log('Listening on port: ', port);
+    console.log('up on: ', port);
 });
