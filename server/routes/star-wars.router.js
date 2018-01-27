@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 // Define Schema
 let favoriteSchema = new mongoose.Schema(
     {
-        url: {type: String, unique: true, required: true}
+        identifier: {type: String, unique: false, required: false}
     }
 )
 // Define Model

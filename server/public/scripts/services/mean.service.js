@@ -1,7 +1,7 @@
 myApp.service('MeanService', ['$http', function($http){
     console.log('service is loaded');
     const self = this;
-    
+
     // For searches
     const config = {
         params: {search: ""}
@@ -36,8 +36,13 @@ myApp.service('MeanService', ['$http', function($http){
             list:[]
         };
  
-     self.addFavorite = function(url) {
-         $http.post('/router', router)
+     self.addFavorite = function(url_2) {
+      console.log(url_2);
+
+
+
+
+         $http.post('/router', url_2)
              .then(function(response) {
                  console.log('post success. this is repsonse:', response);
                  self.getFavorites();
