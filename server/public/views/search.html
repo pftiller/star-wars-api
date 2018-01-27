@@ -12,6 +12,7 @@
     <p>{{film.episode_id}}</p>
     <strong><p>Director:</p></strong>
     <p>{{film.director}}</p>
+    <button class="fa fa-star"></button>
 </div>
 
 <!-- People -->
@@ -37,33 +38,35 @@
         <p>{{planet.terrain}}</p>
     </div>
 <!-- Species -->
-<div class="card" id="species" ng-if="selectedType == 'Species'" ng-repeat="item in vm.swapi.result">
+<div class="card" id="species" ng-if="selectedType == 'Species'" ng-repeat="species in vm.swapi.result">
         <h2>Species</h2>
-        <strong><p>Film title:</p></strong>
-        <p>{{item.title}}</p>
-        <strong><p>Episode #:</p></strong>
-        <p>{{item.episode_id}}</p>
-        <strong><p>Director:</p></strong>
-        <p>{{item.director}}</p>
+        <strong><p>Name of species:</p></strong>
+        <p>{{species.name}}</p>
+        <strong><p>Classification:</p></strong>
+        <p>{{species.classification}}</p>
+        <strong><p>Language:</p></strong>
+        <p>{{species.language}}</p>
     </div>
 <!-- Starships -->
-<div class="card" id="starships" ng-if="selectedType == 'Starships'" ng-repeat="item in vm.swapi.result">
+<div class="card" id="starships" ng-if="selectedType == 'Starships'" ng-repeat="starship in vm.swapi.result">
         <h2>Starships</h2>
-        <strong><p>Film title:</p></strong>
-        <p>{{item.title}}</p>
-        <strong><p>Episode #:</p></strong>
-        <p>{{item.episode_id}}</p>
-        <strong><p>Director:</p></strong>
-        <p>{{item.director}}</p>
+        <strong><p>Name:</p></strong>
+        <p>{{starship.name}}</p>
+        <strong><p>Model:</p></strong>
+        <p>{{starship.model}}</p>
+        <strong><p>Manufacturer:</p></strong>
+        <p>{{starship.manufacturer}}</p>
+        <strong><p>Class:</p></strong>
+        <p>{{starship.class}}</p>
     </div>
 <!-- Vehicles -->
-<div class="card" id="vehicles" ng-if="selectedType == 'Vehicles'" ng-repeat="item in vm.swapi.result">
+<div class="card" id="vehicles" ng-if="selectedType == 'Vehicles'" ng-repeat="vehicle in vm.swapi.result">
         <h2>Vehicles</h2>
-        <strong><p>Film title:</p></strong>
-        <p>{{item.title}}</p>
-        <strong><p>Episode #:</p></strong>
-        <p>{{item.episode_id}}</p>
-        <strong><p>Director:</p></strong>
-        <p>{{item.director}}</p>
+        <strong><p>Name:</p></strong>
+        <p>{{vehicle.name}}</p>
+        <strong><p>Model:</p></strong>
+        <p>{{vehicle.model}}</p>
+        <strong><p>Manufacturer:</p></strong>
+        <p>{{vehicle.manufacturer}}</p>
     </div>
 
