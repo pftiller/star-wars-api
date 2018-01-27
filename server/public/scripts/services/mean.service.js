@@ -1,4 +1,4 @@
-swApp.service('MeanSWService', ['$http', function($http) {
+myApp.service('MeanService', ['$http', function($http) {
     console.log('YO');
     const self = this;
     let config = {

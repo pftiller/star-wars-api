@@ -1,7 +1,6 @@
-console.log('client.js sourced');
-const swApp = angular.module('swApp', ['ngRoute']);
+const myApp = angular.module('myApp', ['ngRoute']);
 
-swApp.config(function ($routeProvider) {
+myApp.config(function ($routeProvider) {
     $routeProvider
                  .when('/search', {
                      templateUrl: '/views/search.html',

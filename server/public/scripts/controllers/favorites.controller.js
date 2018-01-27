@@ -1,4 +1,4 @@
-swApp.controller('FavoritesController', ['MeanSWService', function (MeanSWService){
+myApp.controller('FavoritesController', ['MeanService', function (MeanService){
     console.log('loading favorites controller');
     const self = this;
    
