@@ -1,0 +1,39 @@
+@font-face {
+    font-family:"STARWARS";
+    src:url("/assets/fonts/STARWARS.eot?") format("eot"),
+    url("/assets/fonts/STARWARS.woff") format("woff"),
+    url("/assets/fonts/STARWARS.ttf") format("truetype"),
+    url("/assets/fonts/STARWARS.svg#STARWARS") format("svg");
+    font-weight:normal;
+    font-style:normal;
+}
+html,
+nav {
+    margin: 0px;
+    padding: 0px;
+    background-image: url(/assets/starry_sky.jpg);
+    background-repeat: repeat;
+    }
+
+body {
+    font-family: StarWars;
+    width:95%;
+    margin:0 auto;
+    background-color:transparent;
+}
+
+h1 {
+    font-size:5rem;
+    color:#fee73b;
+    text-align:center;
+
+}
+
+
+/* Navigation */
+md-content {
+    background-color:#000;
+}
+.md-padding {
+    padding:0;
+}

@@ -4,7 +4,8 @@
 <button class="btn-default" ng-click="vm.callSWAPI(selectedType, query)">Search</button>
 
 <!-- Films -->
-<div class="card" id="films" ng-if="selectedType == 'Films'" ng-repeat="film in vm.swapi.result" data="{{film.url}}">
+<div layout="row" layout-xs="column"  id="films" ng-if="selectedType == 'Films'" ng-repeat="film in vm.swapi.result">
+   <div flex="30" class="card" data="{{film.url}}"> 
     <h2>Films</h2>
     <strong><p>Film title:</p></strong>
     <p>{{film.title}}</p>
@@ -14,6 +15,7 @@
     <p>{{film.director}}</p>
     <p>{{film.url}}</p>
     <button class="fa fa-star" ng-click="vm.addFavorite(film)"></button>
+</div>
 </div>
 
 <!-- People -->
