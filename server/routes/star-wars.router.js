@@ -1,14 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
+const favoriteSchema = require('../modules/favorite.schema');
 
-// Define Schema
-let favoriteSchema = new mongoose.Schema(
-    {
-        identifier: {type: String, unique: false, required: false}
-    }
-)
-// Define Model
 let Favorite = mongoose.model('Favorite', favoriteSchema);
 
 // GET 

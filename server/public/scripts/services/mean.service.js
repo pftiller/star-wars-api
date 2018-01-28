@@ -33,19 +33,18 @@ myApp.service('MeanService', ['$http', function($http){
 
      self.addFavorite = {};
      self.favorites = {
-            list:[]
+            list:[
+
+            ]
         };
  
-     self.addFavorite = function(url_2) {
-      console.log(url_2);
+     self.addFavorite = function(favorite) {
+      console.log(favorite);
 
-
-
-
-         $http.post('/router', url_2)
+         $http.post('/router', favorite)
              .then(function(response) {
                  console.log('post success. this is repsonse:', response);
-                 self.getFavorites();
+                //  self.getFavorites();
              })
              .catch(function (response) {
                  console.log('post error. this is response:', response);
