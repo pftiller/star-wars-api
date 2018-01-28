@@ -10,10 +10,6 @@ myApp.service('MeanService', ['$http', function($http){
     self.swapi = {
        
     };
-
-    self.experiment = function(){
-        console.log('hello there!')
-    }
    
      self.callSWAPI = function(type, query) {
         console.log('type is:', type);
@@ -49,18 +45,18 @@ myApp.service('MeanService', ['$http', function($http){
              .catch(function (response) {
                  console.log('post error. this is response:', response);
              });
-     }
+     };
  
      self.getFavorites = function() {
          $http.get('/router')
              .then(function (response) {
                 console.log('get success. this is repsonse:', response);
-                 self.favorites.result = response.data;
+                 self.favorites.result = response;
              })
              .catch(function (response) {
                  console.log('get error. this is response:', response);
              });
-     }
+     };
  
     //  self.deleteFavorite = function(gameId) {
     //      $http.delete(`/games/${gameId}`)
@@ -86,5 +82,4 @@ myApp.service('MeanService', ['$http', function($http){
     //          });
     //  };
  
-self.getFavorites();
 }]);
