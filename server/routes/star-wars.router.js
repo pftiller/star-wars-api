@@ -34,4 +34,24 @@ router.post('/', (req, res) => {
     
 }); 
 
+// DELETE
+router.delete('/:id', (req, res) => {
+    let favoriteId = req.params.id;
+    Favorite.findByIdAndRemove(
+        {"_id": favoriteId},
+        // function(error, removed) 
+        (error, removedDocument) => {
+            if (error) {
+                console.log('error on remove: ', error);
+                res.sendStatus(500);
+            } else {
+                console.log('Document we removed: ', removedDocument);
+                res.sendStatus(200);
+            }
+        }
+    )
+
+});
+
+
 module.exports = router;

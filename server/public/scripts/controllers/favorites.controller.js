@@ -7,5 +7,9 @@ myApp.controller('FavoritesController', ['MeanService', function (MeanService){
     
     
         MeanService.getFavorites();
+
+        self.deleteFavorite = function(id) {
+            MeanService.deleteFavorite(id);
+        }
     
 }]);

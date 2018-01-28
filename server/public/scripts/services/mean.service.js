@@ -51,35 +51,22 @@ myApp.service('MeanService', ['$http', function($http){
          $http.get('/router')
              .then(function (response) {
                 console.log('get success. this is repsonse:', response);
-                 self.favorites.result = response;
+                 self.favorites.result = response.data;
              })
              .catch(function (response) {
                  console.log('get error. this is response:', response);
              });
      };
  
-    //  self.deleteFavorite = function(gameId) {
-    //      $http.delete(`/games/${gameId}`)
-    //          .then(function (response) {
-    //              console.log('delete success. this is response:', response);
-    //              self.getGames();
-    //          })
-    //          .catch(function (response) {
-    //              console.log('delete error. this is response:', response);
-    //          });
-    //  };
- 
-    //  self.updateFavorite = function(game) {
-    //      console.log('updated game: ', game);
-         
-    //      $http.put(`/games/${game._id}`, game)
-    //          .then(function (response) {
-    //              console.log('put success. this is response:', response);
-    //              self.getGames();
-    //          })
-    //          .catch(function (response) {
-    //              console.log('put error. this is response:', response);
-    //          });
-    //  };
+     self.deleteFavorite = function(id) {
+         $http.delete(`/router/${id}`)
+             .then(function (response) {
+                 console.log('delete success. this is response:', response);
+                 self.getFavorites();
+             })
+             .catch(function (response) {
+                 console.log('delete error. this is response:', response);
+             });
+     };
  
 }]);
