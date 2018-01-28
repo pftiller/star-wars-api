@@ -20,9 +20,10 @@ mongoose.connect(databaseUrl);
 
 module.exports = mongoose;
 
-
-app.use(express.static('server/public'));
-// app.use('/router', router);
+app.use(express.static('server/public/'));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json()); 
+app.use('/router', router);
 
 
 app.listen(port, function() {

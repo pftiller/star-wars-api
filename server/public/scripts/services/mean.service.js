@@ -1,7 +1,7 @@
 myApp.service('MeanService', ['$http', function($http){
     console.log('service is loaded');
     const self = this;
-    
+
     // For searches
     const config = {
         params: {search: ""}
@@ -10,10 +10,6 @@ myApp.service('MeanService', ['$http', function($http){
     self.swapi = {
        
     };
-
-    self.experiment = function(){
-        console.log('hello there!')
-    }
    
      self.callSWAPI = function(type, query) {
         console.log('type is:', type);
@@ -33,19 +29,23 @@ myApp.service('MeanService', ['$http', function($http){
 
      self.addFavorite = {};
      self.favorites = {
-            list:[]
+            list:[
+
+            ]
         };
  
-     self.addFavorite = function(url) {
-         $http.post('/router', router)
+     self.addFavorite = function(favorite) {
+      console.log(favorite);
+
+         $http.post('/router', favorite)
              .then(function(response) {
                  console.log('post success. this is repsonse:', response);
-                 self.getFavorites();
+                //  self.getFavorites();
              })
              .catch(function (response) {
                  console.log('post error. this is response:', response);
              });
-     }
+     };
  
      self.getFavorites = function() {
          $http.get('/router')
@@ -56,31 +56,17 @@ myApp.service('MeanService', ['$http', function($http){
              .catch(function (response) {
                  console.log('get error. this is response:', response);
              });
-     }
+     };
  
-    //  self.deleteFavorite = function(gameId) {
-    //      $http.delete(`/games/${gameId}`)
-    //          .then(function (response) {
-    //              console.log('delete success. this is response:', response);
-    //              self.getGames();
-    //          })
-    //          .catch(function (response) {
-    //              console.log('delete error. this is response:', response);
-    //          });
-    //  };
+     self.deleteFavorite = function(id) {
+         $http.delete(`/router/${id}`)
+             .then(function (response) {
+                 console.log('delete success. this is response:', response);
+                 self.getFavorites();
+             })
+             .catch(function (response) {
+                 console.log('delete error. this is response:', response);
+             });
+     };
  
-    //  self.updateFavorite = function(game) {
-    //      console.log('updated game: ', game);
-         
-    //      $http.put(`/games/${game._id}`, game)
-    //          .then(function (response) {
-    //              console.log('put success. this is response:', response);
-    //              self.getGames();
-    //          })
-    //          .catch(function (response) {
-    //              console.log('put error. this is response:', response);
-    //          });
-    //  };
- 
-self.getFavorites();
 }]);

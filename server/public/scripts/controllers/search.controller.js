@@ -19,6 +19,7 @@ myApp.controller('SearchController', ['MeanService', function (MeanService){
 
 
         self.addFavorite = function(url) {
+            console.log('here is what I am sending:', url);
             MeanService.addFavorite(url);
         }
     }]);
