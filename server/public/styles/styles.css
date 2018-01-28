@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Francois+One');
 @font-face {
     font-family:"STARWARS";
     src:url("/assets/fonts/STARWARS.eot?") format("eot"),
@@ -7,6 +8,10 @@
     font-weight:normal;
     font-style:normal;
 }
+br {
+    line-height:.5em;
+}
+
 html,
 nav {
     margin: 0px;
@@ -30,6 +35,14 @@ h1 {
 
 }
 
+h2 {
+    font-family: 'Francois One', sans-serif;
+    color:#fff;
+    font-size: 2em;
+    margin-top:7.5px;
+    text-shadow: 0px 1px 1px #000;
+
+}
 
 /* Navigation */
 md-content {
@@ -46,6 +59,7 @@ md-content {
 /* Cards */
 .card {
     width: calc(100% - 30px);
+    height:300px;
     margin-left: 15px;
     margin-right: 15px;
     margin-top: 15px;
@@ -53,11 +67,15 @@ md-content {
     border-radius: 10px;
     background-color: #A5A5A2;
     position: relative;
+    
 }
 
 .content {
     width:95%;
     margin: 0 auto;
+}
+.content p {
+    display:inline;
 }
 .card button {
     font-size:2em;
@@ -71,7 +89,28 @@ md-content {
     right:0;
 
 }
+#films {
+    background-image: -webkit-linear-gradient(-90deg, #34ADFF 20%, #A5A5A2 0%);
+}
 
+#people {
+    background-image: -webkit-linear-gradient(-90deg, #A947AF 20%, #A5A5A2 0%);
+}
+
+#planets {
+    background-image: -webkit-linear-gradient(-90deg, #FF9700 20%, #A5A5A2 0%);
+}
+#species {
+    background-image: -webkit-linear-gradient(-90deg, #3AD9A1 20%, #A5A5A2 0%);
+}
+
+#starships {
+    background-image: -webkit-linear-gradient(-90deg, #E92F40 20%, #A5A5A2 0%);
+}
+
+#vehicles{
+    background-image: -webkit-linear-gradient(-90deg, #F2D335 20%, #A5A5A2 0%);
+}
 
 @media only screen and (min-width: 600px) {
     .card {
