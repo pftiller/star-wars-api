@@ -1,5 +1,5 @@
 <div layout="row" layout-align="center center" layout-margin layout-padding>
-        <select ng-model="selectedType" ng-options="x for x in vm.types" flex="20">
+        <select ng-model="selectedType" ng-options="x for x in vm.types" flex="20" ng-change="vm.changeResults()">
             <option value="" hidden>Select resource</option>
         </select>
         <input type="text" placeholder="Search term" ng-model="query" flex="30">
