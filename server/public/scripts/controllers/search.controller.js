@@ -18,7 +18,9 @@ myApp.controller('SearchController', ['MeanService', function (MeanService){
         ]
 
 
+        self.disabled = false;
         self.addFavorite = function(url) {
+            self.disabled = true;
             console.log('here is what I am sending:', url);
             MeanService.addFavorite(url);
         }

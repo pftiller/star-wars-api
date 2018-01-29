@@ -1,7 +1,9 @@
-<select ng-model="selectedType" ng-options="x for x in vm.types">
+<div layout="row" layout-align="center center" layout-margin>
+<select ng-model="selectedType" ng-options="x for x in vm.types" flex="20">
  </select>
-<input type="text" ng-model="query">
-<button class="btn-default" ng-click="vm.callSWAPI(selectedType, query)">Search</button>
+<input type="text" placeholder="Search term" ng-model="query" flex="30">
+<button class="btn-default" ng-click="vm.callSWAPI(selectedType, query)" flex="15">Search</button>
+</div>
 <div layout="row" layout-wrap>
 <!-- Films -->
 <div class="card" id="films" ng-if="selectedType == 'Films'" ng-repeat="film in vm.swapi.result" data="{{film.url}}"> 
@@ -51,7 +53,7 @@
         <strong><p>Terrain:</p></strong>
         <p>{{planet.terrain}}</p>
         <br>
-    <button class="fa fa-star" ng-click="vm.addFavorite(film)"></button>
+    <button class="fa fa-star" ng-click="vm.addFavorite(film);" ng-disabled="disabled" ng-click=""></button>
     </div>
     </div>
 <!-- Species -->

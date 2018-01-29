@@ -1,7 +1,6 @@
-        <md-content class="md-padding">
-          <md-nav-bar md-no-ink-bar="disableInkBar" md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
-                <md-nav-item  md-nav-href="#!/search">Search</md-nav-item>
-                <md-nav-item md-nav-href="#!/favorites">Favorites</md-nav-item>
-          </md-nav-bar>
-      
-        </md-content>
+<ul layout="column" layout-gt-xs="row">
+        <li ng-repeat="navlink in navlinks" flex>
+            
+           <a ng-href="{{navlink.link}}" ng-class="{'active': navlink.id == states.activeItem}" ng-click="states.activeItem=navlink.id" flex>{{navlink.title}}</a>
+        </li>   
+</ul>

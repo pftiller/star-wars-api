@@ -32,7 +32,7 @@ h1 {
     color:#fee73b;
     text-align:center;
     font-family: StarWars;
-
+    margin:0;
 }
 
 h2 {
@@ -45,16 +45,37 @@ h2 {
 }
 
 /* Navigation */
-md-content {
-    background-color:#000;
+nav {
+    font-size:4em;
+    font-family: 'Francois One', sans-serif;
+    color:#e1d470;
+    text-align: center;
 }
-.md-padding {
-    padding:0;
+nav ul {
+    margin: 0 auto;
+    width:75%;
+    list-style: none;
 }
-.layout-row {
-    height:100%;
-    min-height: 300px;
-    flex-wrap: wrap;
+nav li {
+    margin-bottom:30px;
+}
+nav a {
+    padding: 5px;
+    margin: 0;
+    cursor: pointer;
+    text-decoration: none;
+}
+nav a.active {
+    border-bottom: 1px solid #e1d470;
+    color: #f6f6f6;
+}
+nav a:visited {
+    color:#e1d470;
+}
+main {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    width: 100%;
 }
 /* Cards */
 .card {
@@ -76,18 +97,6 @@ md-content {
 }
 .content p {
     display:inline;
-}
-.card button {
-    font-size:2em;
-    background: none !important;
-    border: none;
-    padding: 0! important;
-    cursor: pointer;
-    outline: none !important;
-    position: absolute;
-    bottom:0;
-    right:0;
-
 }
 #films {
     background-image: -webkit-linear-gradient(-90deg, #34ADFF 20%, #A5A5A2 0%);
@@ -112,23 +121,45 @@ md-content {
     background-image: -webkit-linear-gradient(-90deg, #F2D335 20%, #A5A5A2 0%);
 }
 
+/* Favorite Button */
+
+.fa-star {
+    font-size: 2em;
+    background: none !important;
+    border: none;
+    padding: 0! important;
+    cursor: pointer;
+    outline: none !important;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 5px;
+    margin-right:5px;
+}
+
+
+/* Media Queries */
 @media only screen and (min-width: 600px) {
     .card {
         width: calc(100% / 2 - 30px);
     }
 }
 @media only screen and (min-width: 960px) {
+    main {
+        margin: 35px auto;
+        width: 85%;
+    }
     .card{
         width: calc(100% / 3 - 30px);
     }
 }
     @media only screen and (min-width: 1280px) {
-        .card {
-            width: calc(100% / 4 - 30px);
+        main {
+            width: 75%;
         }
     }
-    @media only screen and (min-width: 1920px) {
-        .card {
-            width: calc(100% / 5 - 30px);
+    @media only screen and (min-width: 1960px) {
+        .card{
+            width: calc(100% / 4 - 30px);
         }
     }
