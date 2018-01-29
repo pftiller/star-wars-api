@@ -23,4 +23,9 @@ myApp.controller('SearchController', ['MeanService', '$scope', function (MeanSer
             MeanService.addFavorite(url);
             
         }
+
+        self.changeResults = function() {
+            console.log('ran');
+            self.swapi.result = [];
+        }
     }]);
