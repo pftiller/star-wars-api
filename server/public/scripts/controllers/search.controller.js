@@ -1,4 +1,4 @@
-myApp.controller('SearchController', ['MeanService', function (MeanService){
+myApp.controller('SearchController', ['MeanService', '$scope', function (MeanService, $scope){
     console.log('loading search controller');
     const self = this;
     self.swapi = MeanService.swapi;
@@ -17,9 +17,10 @@ myApp.controller('SearchController', ['MeanService', function (MeanService){
          'Vehicles'
         ]
 
-
-        self.addFavorite = function(url) {
+        self.addFavorite = function(url, btn) {
+            btn.target.disabled = true;
             console.log('here is what I am sending:', url);
             MeanService.addFavorite(url);
+            
         }
     }]);
