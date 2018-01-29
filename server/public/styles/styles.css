@@ -8,6 +8,7 @@
     font-weight:normal;
     font-style:normal;
 }
+
 * {
     -webkit-appearance: none;
 }
@@ -152,27 +153,31 @@ input:focus {
 .attributes {
     margin: 25px 0;
 }
-#films {
+.films {
     background-image: -webkit-linear-gradient(-90deg, #34ADFF 20%, #A5A5A2 0%);
 }
 
-#people {
+.people {
     background-image: -webkit-linear-gradient(-90deg, #A947AF 20%, #A5A5A2 0%);
 }
 
-#planets {
+.planets {
     background-image: -webkit-linear-gradient(-90deg, #FF9700 20%, #A5A5A2 0%);
 }
-#species {
+.species {
     background-image: -webkit-linear-gradient(-90deg, #3AD9A1 20%, #A5A5A2 0%);
 }
 
-#starships {
+.starships {
     background-image: -webkit-linear-gradient(-90deg, #E92F40 20%, #A5A5A2 0%);
 }
 
-#vehicles{
+.vehicles{
     background-image: -webkit-linear-gradient(-90deg, #F2D335 20%, #A5A5A2 0%);
+}
+/* Favorite Card */
+.favorites {
+    background-image: -webkit-linear-gradient(-90deg, #0037FF 20%, #A5A5A2 0%);
 }
 
 /* Favorite Button */
@@ -193,9 +198,35 @@ input:focus {
     margin-bottom: 5px;
     margin-right:5px;
     color: #555555;
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+        box-shadow: 0 0 1px transparent;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
 }
+.fa-times-circle {
+    top: 0;
+    right: 0;
+    margin-top: 5px;
+    margin-right:5px;
+    color: #E92F40;
+}
+.fa-star:hover {
+    color:#777777;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  }
+.fa-times-circle:hover {
+    color: #c01424;
+}
+
 .fa-star:disabled {
     color: #e1d470;
+    pointer-events: none;
 }
 /* Media Queries */
 @media only screen and (min-width: 600px) {
