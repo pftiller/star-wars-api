@@ -176,7 +176,7 @@ input:focus {
 }
 
 /* Favorite Button */
-fa fa-times-circle
+.fa-times-circle,
 .fa-star {
     font-size: 2em;
     background: none !important;
@@ -185,6 +185,9 @@ fa fa-times-circle
     cursor: pointer;
     outline: none !important;
     position: absolute;
+   
+}
+.fa-star {
     bottom: 0;
     right: 0;
     margin-bottom: 5px;
@@ -194,7 +197,6 @@ fa fa-times-circle
 .fa-star:disabled {
     color: #e1d470;
 }
-
 /* Media Queries */
 @media only screen and (min-width: 600px) {
     .card {
