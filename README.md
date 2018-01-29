@@ -1,0 +1,3 @@
+I found working with Mongo somewhat difficult. I ran into issues several times that required me to drop my database and set up again. I still struggle a bit with some of the Angular stuff. As far as Material goes, the little I have dabbled in it, it almost seems less of a hassle and less troublesome to just do the styling manually. It just seems very volatile. I suppose it will continue to get easier with practice, but it just now seems to be more trouble than it's worth. 
+
+Overall, I wanted to implement a lot more features and functionality, so I am a little disappointed that I didn't have a chance to do so. But getting the core functionality done and getting it to look at least somewhat how I wanted it to look took longer than I anticipated. 
