@@ -19,7 +19,7 @@
                 <div class="attributes"> <strong><p>Director:</p></strong>
                     <p>{{film.director}}</p>
                 </div>
-                <button class="fa fa-star" ng-click="vm.addFavorite(film)"></button>
+                <button class="fa fa-star" ng-click="vm.addFavorite(film, $event)"></button>
             </div>
         </div>
         <!-- People -->
@@ -38,7 +38,7 @@
                 <div class="attributes"> <strong><p>Eye color:</p></strong>
                     <p>{{person.eye_color}}</p>
                 </div>
-                <button class="fa fa-star" ng-click="vm.addFavorite(film)"></button>
+                <button class="fa fa-star" ng-disabled="isDisabled" ng-click="vm.addFavorite(person)"></button>
             </div>
         </div>
         <!-- Planets -->
@@ -54,7 +54,7 @@
                 <div class="attributes"> <strong><p>Terrain:</p></strong>
                     <p>{{planet.terrain}}</p>
                 </div>
-                <button class="fa fa-star" ng-click="vm.addFavorite(film);" ng-disabled="disabled" ng-click=""></button>
+                <button class="fa fa-star" ng-disabled="isDisabled" ng-click="vm.addFavorite(planet);" ng-disabled="disabled" ng-click=""></button>
             </div>
         </div>
         <!-- Species -->
@@ -70,7 +70,7 @@
                 <div class="attributes"> <strong><p>Language:</p></strong>
                     <p>{{species.language}}</p>
                 </div>
-                <button class="fa fa-star" ng-click="vm.addFavorite(film)"></button>
+                <button class="fa fa-star" ng-disabled="isDisabled" ng-click="vm.addFavorite(species)"></button>
             </div>
         </div>
         <!-- Starships -->
@@ -86,7 +86,7 @@
                 <div class="attributes"> <strong><p>Manufacturer:</p></strong>
                     <p>{{starship.manufacturer}}</p>
                 </div>
-                <button class="fa fa-star" ng-click="vm.addFavorite(film)"></button>
+                <button class="fa fa-star" ng-disabled="isDisabled" ng-click="vm.addFavorite(starship)"></button>
             </div>
         </div>
         <!-- Vehicles -->
@@ -102,7 +102,7 @@
                 <div class="attributes"> <strong><p>Manufacturer:</p></strong>
                     <p>{{vehicle.manufacturer}}</p>
                 </div>
-                <button class="fa fa-star" ng-click="vm.addFavorite(film)"></button>
+                <button class="fa fa-star" ng-disabled="isDisabled" ng-click="vm.addFavorite(vehicle)"></button>
             </div>
         </div>
     </div>
