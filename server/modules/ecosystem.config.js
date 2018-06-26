@@ -2,10 +2,7 @@ module.exports = {
   apps : [
     {
       name      : 'weekend-challenge-5',
-      script    : '../server.js',
-      env_production: {
-        NODE_ENV: "production"
-      }
+      script    : '../server.js'
     }],
   deploy : {
     production : {
