@@ -5,12 +5,12 @@ module.exports = {
     }],
     deploy: {
       production: {
-        user: 'ubuntu',
+        user: 'pftiller',
         host: 'ec2-18-219-244-117.us-east-2.compute.amazonaws.com',
         key: '~/.ssh/portfolio.pem',
         ref: 'origin/aws',
         repo: 'git@github.com:pftiller/weekend-challenge-5.git',
-        path: '/home/ubuntu/weekend-challenge-5',
+        path: '/weekend-challenge-5',
         'post-deploy': 'npm install && pm2 startOrRestart ecosystem.config.js'
       }
     }
