@@ -6,8 +6,8 @@ module.exports = {
     }],
   deploy : {
     production : {
-      user : 'ubuntu',
-      host : 'ec2-18-219-244-117.us-east-2.compute.amazonaws.com',
+      user : ' ubuntu',
+      host : 'ec2-13-59-238-152.us-east-2.compute.amazonaws.com',
       ref  : 'origin/aws',
       repo : 'git@github.com:pftiller/weekend-challenge-5.git',
       path: '/home/ubuntu/weekend-challenge-5',
