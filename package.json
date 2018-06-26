@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "restart": "pm2 startOrRestart ecosystem.config.js",
+    "deploy": "pm2 deploy ecosystem.config.js production",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server/server.js"
   },
@@ -25,7 +27,9 @@
     "angular-messages": "^1.6.8",
     "angular-route": "^1.6.8",
     "express": "^4.16.2",
-    "mongoose": "^5.0.1",
+    "mongoose": "^5.0.1"
+  },
+  "devDependencies": {
     "pm2": "^2.10.4"
   }
 }
