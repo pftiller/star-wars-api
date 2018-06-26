@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/server.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
     "angular-messages": "^1.6.8",
     "angular-route": "^1.6.8",
     "express": "^4.16.2",
-    "mongoose": "^5.0.1"
+    "mongoose": "^5.0.1",
+    "pm2": "^2.10.4"
   }
 }

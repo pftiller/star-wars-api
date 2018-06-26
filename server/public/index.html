@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Star Cards</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Angular -->
     <script src="vendors/angular.min.js" charset="utf-8"></script>
@@ -20,21 +21,23 @@
     <script src="scripts/controllers/search.controller.js" charset="utf-8"></script>
     <script src="scripts/controllers/favorites.controller.js" charset="utf-8"></script>
     <script src="scripts/services/mean.service.js" charset="utf-8"></script>
-     <!-- Styling-->
-     <script src="https://use.fontawesome.com/57b1dead55.js"></script>
-     <link href="vendors/angular-material.min.css" rel="stylesheet" type="text/css">
-     <link href="styles/normalize.css" rel="stylesheet" text="text/css">
-     <link href="styles/styles.css" rel="stylesheet" text="text/css">
+    <!-- Styling-->
+    <script src="https://use.fontawesome.com/57b1dead55.js"></script>
+    <link href="vendors/angular-material.min.css" rel="stylesheet" type="text/css">
+    <link href="styles/normalize.css" rel="stylesheet" text="text/css">
+    <link href="styles/styles.css" rel="stylesheet" text="text/css">
 </head>
+
 <body>
     <h1>STAR CARDS</h1>
     <nav ng-controller="NavController as vm" ng-include="'/views/templates/nav.html'">
-    
+
     </nav>
     <main>
-    <section ng-view>
+        <section ng-view>
 
-    </section>
-</main>
+        </section>
+    </main>
 </body>
+
 </html>
