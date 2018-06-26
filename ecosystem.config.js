@@ -10,7 +10,7 @@ module.exports = {
         key: '~/.ssh/portfolio.pem',
         ref: 'origin/aws',
         repo: 'git@github.com:pftiller/weekend-challenge-5.git',
-        path: '~/weekend-challenge-5',
+        path: '/home/ubuntu/weekend-challenge-5',
         'post-deploy': 'npm install && pm2 startOrRestart ecosystem.config.js'
       }
     }
