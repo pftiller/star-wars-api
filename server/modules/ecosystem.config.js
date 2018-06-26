@@ -2,7 +2,7 @@ module.exports = {
   apps : [
     {
       name      : 'weekend-challenge-5',
-      script    : '../server/server.js'
+      script    : '../server.js'
     }],
   deploy : {
     production : {
