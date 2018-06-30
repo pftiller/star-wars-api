@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "restart": "pm2 startOrRestart server/modules/ecosystem.config.js",
-    "deploy": "pm2 deploy server/modules/ecosystem.config.js production",
+    "pack": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server/server.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -27,9 +26,13 @@
     "angular-messages": "^1.6.8",
     "angular-route": "^1.6.8",
     "express": "^4.16.2",
+    "mongodb-stitch-server-sdk": "^4.0.3",
+    "mongodb-stitch-server-services-http": "^4.0.3",
+    "mongodb-stitch-server-services-mongodb-remote": "^4.0.3",
     "mongoose": "^5.0.1"
   },
   "devDependencies": {
-    "pm2": "^2.10.4"
+    "webpack": "^4.14.0",
+    "webpack-cli": "^3.0.8"
   }
 }

@@ -1,0 +1,9 @@
+{
+    "id": "5b32ae0f28b2b3423fa0e50d",
+    "name": "mongodb-atlas",
+    "type": "mongodb-atlas",
+    "config": {
+        "clusterName": "portfolio"
+    },
+    "version": 1
+}
