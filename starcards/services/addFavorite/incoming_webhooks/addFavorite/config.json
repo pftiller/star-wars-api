@@ -1,0 +1,12 @@
+{
+    "id": "5b377f95cfb737693f51f6ce",
+    "name": "addFavorite",
+    "run_as_user_id": "",
+    "run_as_user_id_script_source": "",
+    "options": {
+        "httpMethod": "POST",
+        "secret": "favorite",
+        "verifyPayload": true
+    },
+    "respond_result": true
+}

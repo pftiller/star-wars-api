@@ -1,28 +1,54 @@
 {
-    "id": "5b32ae4dcc1889128cc61671",
+    "id": "5b37bc49b8b9980df773b97b",
     "database": "starcards",
     "collection": "favorites",
-    "roles": [
-        {
-            "name": "owner",
-            "apply_when": {
-                "owner_id": "%%user.id"
-            },
-            "read": true,
-            "write": true,
-            "insert": true,
-            "delete": true,
-            "additional_fields": {}
-        }
-    ],
     "schema": {
         "properties": {
             "_id": {
                 "bsonType": "objectId"
             },
-            "owner_id": {
-                "bsonType": "string"
+            "birth_year": {
+                "bsonType": "String"
+            },
+            "class": {
+                "bsonType": "String"
+            },
+            "classificaton": {
+                "bsonType": "String"
+            },
+            "episode_id": {
+                "bsonType": "Int32"
+            },
+            "eye_color": {
+                "bsonType": "String"
+            },
+            "gender": {
+                "bsonType": "String"
+            },
+            "manufacturer": {
+                "bsonType": "String"
+            },
+            "model": {
+                "bsonType": "String"
+            },
+            "name": {
+                "bsonType": "String"
+            },
+            "population": {
+                "bsonType": "Int32"
+            },
+            "terrain": {
+                "bsonType": "String"
+            },
+            "title": {
+                "bsonType": "String"
+            },
+            "url": {
+                "bsonType": "String"
             }
         }
     }
 }
+
+      
+    

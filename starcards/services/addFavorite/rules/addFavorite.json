@@ -1,0 +1,11 @@
+{
+    "id": "5b380f0b28b2b39f5a0c5892",
+    "name": "addFavorite",
+    "when": {
+        "%%args.url.host": {
+            "%in": [
+                "google.com"
+            ]
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "id": "5b3809c65fdce001e3fa270f",
+    "name": "deleteFavorite",
+    "run_as_user_id": "",
+    "run_as_user_id_script_source": "",
+    "options": {
+        "httpMethod": "POST",
+        "secret": "dfafd",
+        "verifyPayload": true
+    },
+    "respond_result": true
+}

@@ -1,0 +1,10 @@
+{
+    "id": "5b3815095adebb82030951c9",
+    "name": "github",
+    "run_as_user_id": "",
+    "run_as_user_id_script_source": "",
+    "options": {
+        "secret": "Roundmind50!"
+    },
+    "respond_result": false
+}

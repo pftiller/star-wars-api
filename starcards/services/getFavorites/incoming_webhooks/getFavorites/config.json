@@ -1,0 +1,12 @@
+{
+    "id": "5b37d42e28b2b39f5a0383b2",
+    "name": "getFavorites",
+    "run_as_user_id": "",
+    "run_as_user_id_script_source": "",
+    "options": {
+        "httpMethod": "GET",
+        "secret": "string",
+        "verifyPayload": true
+    },
+    "respond_result": true
+}
