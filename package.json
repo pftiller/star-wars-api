@@ -27,6 +27,7 @@
     "angular-messages": "^1.6.8",
     "angular-route": "^1.6.8",
     "express": "^4.16.2",
+    "lodash": "^4.17.11",
     "mongoose": "^5.4.11",
     "mpath": "^0.5.1"
   },
