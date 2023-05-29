@@ -1,12 +1,13 @@
 const express = require('express');
 const app = express();
+const cors = require("cors");
 const bodyParser = require('body-parser');
 const router = require('./routes/star-wars.router');
 const port = 5418;
 /** -------- MONGOOSE CONNECTION --------**/
 var mongoose = require('mongoose');
 
-var databaseUrl = 'mongodb://localhost:27017/mean-star-wars';
+var databaseUrl = 'mongodb://localhost:27019/mean-star-wars';
 
 mongoose.connection.on('connected', function() {
   console.log('mongoose connected to : ', databaseUrl);
@@ -20,6 +21,7 @@ mongoose.connect(databaseUrl);
 
 module.exports = mongoose;
 
+app.use(cors());
 app.use(express.static('server/public/'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json()); 

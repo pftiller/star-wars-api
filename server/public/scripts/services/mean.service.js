@@ -16,7 +16,7 @@ myApp.service('MeanService', ['$http', function($http){
         console.log('query is:', query);
         config.params.search = query;
         console.log('callSWAPI ran');
-         $http.get('https://swapi.co/api/' + type + '/', config)
+         $http.get('https://swapi.dev/api/' + type + '/', config)
          .then(function(response){
              console.log('SWAPI response: ', response);
              self.swapi.result = response.data.results;
